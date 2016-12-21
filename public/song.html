@@ -1,0 +1,23 @@
+<h2 style="text-align:center">
+  {{ songs.songName }} by {{ songs.artistName }}
+  <a href="#/">
+    <button class="btn btn-danger" ng-click="deleteSong(songs._id)">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"><span>
+    </button>
+  </a>
+</h2>
+
+<div ng-hide="editMode" class="container" style="text-align:center; border:thin">
+  <div>
+    <br></br>
+    <h4 ng-if="songs.genre">Genre: {{ songs.genre }}</h4>
+    <h4 ng-if="songs.album">Album: {{ songs.album }} </h4>
+    <h4 ng-if="songs.year">Year: {{ songs.year }} </h4>
+    <p>
+      <button style="margin-top:20px" class="btn btn-success" ng-click="toggleEdit()">Edit</button>
+      <a style="margin-top:20px" class="btn btn-primary" href="#/">Back</a>
+    </p>
+  </div>
+</div>
+<div ng-include="songFormUrl">
+</div>

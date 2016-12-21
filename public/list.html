@@ -1,0 +1,31 @@
+<h1 style="text-align:center">
+  Songs
+  <a class="btn btn-success" href="#/new/songs">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"><span>
+  </a>
+</h1>
+<br></br>
+<div class="table-responsive">
+  <table class="table table-hover table-condensed">
+    <thead>
+      <th><h2>Song Title</h2></th>
+      <th><h2>Artist Name</h2></th>
+      <th><h2>Edit</h2></th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="song in songs | orderBy:'artistName'">
+        <td>
+          <h3><a ng-href="#/songs/{{song._id}}">{{ song.songName }}</a></h3>
+        </td>
+        <td>
+          <h3><a ng-href="#/songs/{{song._id}}">{{ song.artistName }}</a></h3>
+        </td>
+        <td>
+          <a class="btn btn-info" ng-href="#/songs/{{song._id}}">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="font-size:30px"></span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "NorthQuadTest",
+  "version": "1.0.0",
+  "description": "A web app to view and edit songs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Parimal Rane",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongodb": "^2.0.43"
+  }
+}
